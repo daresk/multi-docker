@@ -4,7 +4,26 @@
         {
             "name": "client",
             "image": "darcad/multi-client",
-            "hostname": "client"
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "darcad/multi-server",
+            "hostname": "api",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "darcad/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "nginx",
+            "image": "darcad/multi-nginx",
+            "hostname": "nginx",
+            "essential": true
         }
     ]
 }

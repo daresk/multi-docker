@@ -11,7 +11,7 @@ script:
   - docker run -e CI=true darcad/react-test npm test
 
 after_success:
-  - docker build -t darcad/multi-client ./client
+  - docker build -t darcad/multi-frontend ./client
   - docker build -t darcad/multi-nginx ./nginx
   - docker build -t darcad/multi-server ./server
   - docker build -t darcad/multi-worker ./worker
@@ -19,7 +19,7 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   #push again change
-  - docker push darcad/multi-client
+  - docker push darcad/multi-frontend
   - docker push darcad/multi-nginx
   - docker push darcad/multi-server
   - docker push darcad/multi-worker
