@@ -19,8 +19,8 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   #push again change
-  - docker push darcad/multi-client
-  - docker push darcad/multi-nginx
-  - docker push darcad/multi-server
-  - docker push darcad/multi-worker
+  - docker push darcad/complex:multi-client
+  - docker push darcad/complex:multi-nginx
+  - docker push darcad/complex:multi-server
+  - docker push darcad/complex:multi-worker
   # comment for another build
